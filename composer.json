@@ -25,5 +25,7 @@
         "post-update-cmd": [
             "tozogluburak\\CdnHelper\\ComposerScripts::updateAutoload"
         ]
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
