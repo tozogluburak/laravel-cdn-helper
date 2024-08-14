@@ -1,0 +1,29 @@
+{
+    "name": "tozogluburak/laravel-cdn-helper",
+    "description": "A Laravel package for CDN integration",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Burak",
+            "email": "tozogluburak@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "tozogluburak\\CdnHelper\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.3",
+        "illuminate/support": "^8.0|^9.0|^10.0"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "tozogluburak\\CdnHelper\\ComposerScripts::updateAutoload"
+        ],
+        "post-update-cmd": [
+            "tozogluburak\\CdnHelper\\ComposerScripts::updateAutoload"
+        ]
+    }
+}
