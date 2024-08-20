@@ -19,7 +19,7 @@
         "illuminate/support": "^8.0|^9.0|^10.0"
     },
     "scripts": { 
-        "post-install-cmd": "php scripts/create-cdn-helper.php"
+        "post-install-cmd": "php src/scripts/create-cdn-helper.php"
     },
     "minimum-stability": "dev",
     "prefer-stable": true
