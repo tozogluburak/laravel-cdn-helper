@@ -18,13 +18,8 @@
         "php": ">=7.3",
         "illuminate/support": "^8.0|^9.0|^10.0"
     },
-    "scripts": {
-        "post-install-cmd": [
-            "php artisan vendor:publish --provider=TozogluBurak\\LaravelCdnHelper\\LaravelCdnHelperServiceProvider --tag=config"
-        ],
-        "post-update-cmd": [
-            "php artisan vendor:publish --provider=TozogluBurak\\LaravelCdnHelper\\LaravelCdnHelperServiceProvider --tag=config"
-        ]
+    "scripts": { 
+        "post-install-cmd": "php scripts/create-cdn-helper.php"
     },
     "minimum-stability": "dev",
     "prefer-stable": true
