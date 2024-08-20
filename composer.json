@@ -20,10 +20,10 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "tozogluburak\\CdnHelper\\ComposerScripts::updateAutoload"
+            "php artisan vendor:publish --provider=TozogluBurak\\LaravelCdnHelper\\LaravelCdnHelperServiceProvider --tag=config"
         ],
         "post-update-cmd": [
-            "tozogluburak\\CdnHelper\\ComposerScripts::updateAutoload"
+            "php artisan vendor:publish --provider=TozogluBurak\\LaravelCdnHelper\\LaravelCdnHelperServiceProvider --tag=config"
         ]
     },
     "minimum-stability": "dev",
