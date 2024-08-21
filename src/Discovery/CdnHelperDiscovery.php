@@ -3,11 +3,18 @@
 namespace tozogluburak\CdnHelper\Discovery;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Pipeline\Pipeline;
+use Illuminate\Filesystem\Filesystem;
 use Illuminate\Foundation\PackageManifest;
 
 class CdnHelperDiscovery extends ServiceProvider
 {
+    private $filesystem;
+
+    public function __construct(Filesystem $filesystem)
+    {
+        $this->filesystem = $filesystem;
+    }
+
     public function boot()
     {
         $this->publishes([
@@ -15,7 +22,7 @@ class CdnHelperDiscovery extends ServiceProvider
         ]);
 
         // Get the package manifest instance
-        $manifest = new PackageManifest($this->app);
+        $manifest = new PackageManifest($this->filesystem);
 
         // Register the package
         $manifest->packages()->push('tozogluburak/cdn-helper');
