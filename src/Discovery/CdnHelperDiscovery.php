@@ -8,21 +8,14 @@ use Illuminate\Foundation\PackageManifest;
 
 class CdnHelperDiscovery extends ServiceProvider
 {
-    private $filesystem;
-
-    public function __construct(Filesystem $filesystem)
-    {
-        $this->filesystem = $filesystem;
-    }
-
-    public function boot()
+    public function boot(Filesystem $filesystem)
     {
         $this->publishes([
             __DIR__.'/../Helpers/CdnHelpers.php' => app_path('Http/Helpers/CdnHelpers.php'),
         ]);
 
         // Get the package manifest instance
-        $manifest = new PackageManifest($this->filesystem);
+        $manifest = new PackageManifest($filesystem);
 
         // Register the package
         $manifest->packages()->push('tozogluburak/cdn-helper');
