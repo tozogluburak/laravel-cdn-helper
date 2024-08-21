@@ -15,8 +15,4 @@ class CdnHelperDiscovery extends ServiceProvider
             __DIR__.'/../Helpers/CdnHelpers.php' => app_path('Http/Helpers/CdnHelpers.php'),
         ]);
     }
-    public function register()
-    {
-        //
-    }
 }
