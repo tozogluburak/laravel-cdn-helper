@@ -8,7 +8,7 @@ use Illuminate\Filesystem\Filesystem;
 
 class CdnHelperDiscovery extends ServiceProvider
 {
-    public function boot(Filesystem $filesystem)
+    public function boot()
     {
         // Publish the CdnHelpers.php file to the app/Http/Helpers directory
         $this->publishes([
