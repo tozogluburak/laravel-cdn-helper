@@ -9,6 +9,9 @@
             "email": "tozogluburak@gmail.com"
         }
     ],
+    "providers": [
+    "tozogluburak\\CdnHelper\\Providers\\CdnHelperServiceProvider"
+    ],
     "autoload": {
         "psr-4": {
             "tozogluburak\\CdnHelper\\": "src/"
@@ -19,8 +22,17 @@
         "illuminate/support": "^8.0|^9.0|^10.0"
     },
     "scripts": { 
-        "post-install-cmd": "php src/scripts/create-cdn-helper.php"
+        "post-install-cmd": "php src/scripts/create-cdn-helper.php",
+        "post-install-cmd-publish-config": "php artisan vendor:publish --provider=\"tozogluburak\\CdnHelper\\Providers\\CdnHelperServiceProvider\" --tag=\"cdn-config\""
+
     },
+    "extra": {
+    "laravel": {
+        "providers": [
+            "tozogluburak\\CdnHelper\\Discovery\\CdnHelperDiscovery"
+        ]
+    }
+},
     "minimum-stability": "dev",
     "prefer-stable": true
 }

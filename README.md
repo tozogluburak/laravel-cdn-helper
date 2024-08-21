@@ -7,7 +7,7 @@ This package provides a simple way to integrate CDN support into your Laravel ap
 1. Add the package to your project via Composer:
 
     ```bash
-    composer require tozogluburak/laravel-cdn-helper:^1.3
+    composer require tozogluburak/laravel-cdn-helper:^1.4
     ```
 
 2. After installation, the package will automatically add the CDN helper function to your project.
